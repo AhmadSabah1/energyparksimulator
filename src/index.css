@@ -1,13 +1,53 @@
-body {
+body, html, #root {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive, svg.leaflet-image-layer.leaflet-interactive path  {
+  display: flex;
+}
+
+.custom-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.custom-icon img {
+  width: 25px; /* Keep the icon size constant */
+  height: 25px; /* Keep the icon size constant */
+}
+
+.icon1 {
+  background: rgba(255, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+}
+
+.icon2 {
+  background: rgba(255, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+}
+
+.icon3 {
+  background: rgba(255, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+}
+
+.icon4 {
+  background: rgba(255, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
 }
