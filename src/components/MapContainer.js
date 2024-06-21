@@ -25,7 +25,7 @@ const MapComponent = ({ selectedItem, addMarker }) => {
     return null;
 };
 
-const MapContainer = ({ selectedItem }) => {
+const MapContainer = ({ selectedItem, onAddMarker }) => {
     const [markers, setMarkers] = useState([]);
     const mapRef = useRef(null);
 
@@ -46,7 +46,8 @@ const MapContainer = ({ selectedItem }) => {
             })
         };
         setMarkers([...markers, newMarker]);
-    };
+        onAddMarker(position, type); // This line was added to pass the type to handleAddMarker
+    };    
 
     const updateMarkerPosition = (id, newPosition) => {
         setMarkers(markers.map(marker => marker.id === id ? { ...marker, position: newPosition } : marker));
