@@ -25,9 +25,9 @@ const MapComponent = ({ selectedItem, addMarker }) => {
     return null;
 };
 
-const MapContainer = ({ selectedItem, onAddMarker }) => {
+const MapContainer = ({ selectedItem, onAddMarker, score, setScore }) => {
     const [markers, setMarkers] = useState([]);
-    const [score, setScore] = useState(0);
+    // const [score, setScore] = useState(0);
     const mapRef = useRef(null);
     const divRefs = useRef([]);
 
@@ -68,18 +68,30 @@ const MapContainer = ({ selectedItem, onAddMarker }) => {
         setMarkers(markers.filter(marker => marker.id !== id));
     };
 
+    // const updateScore = useCallback((area, markerId, reset = false) => {
+    //     setMarkers(markers => markers.map(marker => {
+    //         if (marker.id === markerId) {
+    //             const newScore = reset ? 0 : (marker.score + area);
+    //             setScore(prevScore => prevScore + (newScore - marker.score));
+    //             return { ...marker, score: newScore };
+    //         }
+    //         return marker;
+    //     }));
+    // }, []);
+
     const updateScore = useCallback((area, markerId, reset = false) => {
         setMarkers(markers => markers.map(marker => {
             if (marker.id === markerId) {
                 const newScore = reset ? 0 : (marker.score + area);
-                setScore(prevScore => prevScore + (newScore - marker.score));
+                setScore(prevScore => prevScore + (newScore - marker.score)); // Update score using setScore prop
                 return { ...marker, score: newScore };
             }
             return marker;
         }));
-    }, []);
+    }, [setScore]);
 
     console.log(score)
+
     return (
         <div style={mapStyles}>
             <LeafletMap

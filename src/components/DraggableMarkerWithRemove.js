@@ -13,7 +13,7 @@ const DraggableMarkerWithRemove = ({ marker, onDragEnd, onRemove, divs, updateSc
     const radii = {
         ITEM1: 200, // Example radius for ITEM1
         ITEM2: 150, // Example radius for ITEM2
-        ITEM3: 100, // Example radius for ITEM3
+        ITEM3: 20, // Example radius for ITEM3
         ITEM4: 50   // Example radius for ITEM4
     };
 
