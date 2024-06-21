@@ -20,8 +20,12 @@
   },
   "eslintConfig": {
     "extends": [
+<<<<<<< Updated upstream
       "react-app",
       "react-app/jest"
+=======
+      "react-app"
+>>>>>>> Stashed changes
     ]
   },
   "browserslist": {
