@@ -132,20 +132,20 @@ const MapContainer = ({ selectedItem, onAddMarker, score, setScore }) => {
             }}>
                 <div style={{
                     width: "100%",
-                    height: "400px",
+                    height: "30%",
                     display: "flex"
                 }}>
                     <div ref={(el) => (divRefs.current[0] = el)} style={{
-                        width: '600px',
-                        height: '400px',
+                        width: '50%',
+                        height: 'auto',
                         zIndex: 100,
                         pointerEvents: 'auto', // Make this specific div interactive
                         backgroundColor: 'rgba(255, 0, 0, 0.5)' // Temporary background for visibility
                     }}>
                     </div>
                     <div ref={(el) => (divRefs.current[1] = el)} style={{
-                        width: '300px',
-                        height: '400px',
+                        width: '25%',
+                        height: "auto",
                         zIndex: 100,
                         pointerEvents: 'auto', // Make this specific div interactive
                         backgroundColor: 'rgba(0, 255, 0, 0.5)' // Temporary background for visibility
@@ -153,24 +153,24 @@ const MapContainer = ({ selectedItem, onAddMarker, score, setScore }) => {
                 </div>
                 <div style={{
                     width: "100%",
-                    height: "150px",
+                    height: "15%",
                     display: "flex"
                 }}>
                     <div ref={(el) => (divRefs.current[2] = el)} style={{
-                        width: '500px',
-                        height: '150px',
+                        width: '40%',
+                        height: 'auto',
                         zIndex: -10,
                         backgroundColor: 'rgba(0, 0, 255, 0.5)' // Temporary background for visibility
                     }}/>
                 </div>
                 <div style={{
                     width: "100%",
-                    height: "400px",
+                    height: "40%",
                     display: "flex"
                 }}>
                     <div ref={(el) => (divRefs.current[3] = el)} style={{
-                        width: '300px',
-                        height: '400px',
+                        width: '25%',
+                        height: 'auto',
                         zIndex: 100,
                         pointerEvents: 'auto', // Make this specific div interactive
                         backgroundColor: 'rgba(255, 255, 0, 0.5)' // Temporary background for visibility
